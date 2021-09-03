@@ -27,8 +27,8 @@ public class gui extends JFrame {
         setSize(width_final, height_final);
         setUndecorated(true);
         setAlwaysOnTop(true);
-        setBackground(new Color(225, 225, 225));
-        setForeground(new Color(225, 225, 225));
+        setBackground(new Color(0, 0, 0));
+        setForeground(new Color(0, 0, 0));
     }
 
     public static void main(String[] args) throws IOException {
@@ -79,7 +79,6 @@ public class gui extends JFrame {
                 try {
                     searchTab();
                 } catch (IOException e1) {
-                    // TODO Auto-generated catch block
                     e1.printStackTrace();
                 }
             });

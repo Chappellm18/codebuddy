@@ -5,14 +5,14 @@ Aims to keep you focused and effecient
 
 ## Feautures
 
-- ### quick google
+- ### Quick Google
     - googles whatever is selected onclick
     - if nothing selected expands a search bar 
-- ### set breaks
-    - menal breaks every x minutes
-- ### git reminders/auto git
+- ### Set Breaks
+    - mental breaks every x minutes
+- ### Git Reminders/Auto Git
     - reminders to save
-- ### small task list
+- ### Small Task List
     - simple todo checkbox
 ## Widget
 
@@ -21,5 +21,12 @@ click it and it expands
 
 ## Uses
 
-python?
-web app?
+Java - I like it thats why
+Java swing - for the gui
+python or c - depends on how getting selected text works
+html - small localhost page for settings
+
+# Ideas
+when clicked have the buttons expand to the full gui height width 
+then change back to the buttons after hover is gone
+gets bigger to display info

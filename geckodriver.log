@@ -19,3 +19,10 @@ console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkErr
 
 ###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
 
+1631044789609	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\chapp\\AppData\\Local\\Temp\\rust_mozprofile1IOkZZ"
+1631044790015	Marionette	INFO	Marionette enabled
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\chapp\\AppData\\Local\\Temp\\rust_mozprofile1IOkZZ\\search.json.mozlz4", (void 0)))
+1631044792360	Marionette	INFO	Listening on port 58827
+1631044792842	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 73: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.

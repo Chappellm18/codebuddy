@@ -20,10 +20,11 @@ public class gui extends JFrame {
     public static int height_final = 125;
 
     // Methods
+    // Initalize
     public gui() {
         initUI();
     }
-
+    // Set defualts
     private void initUI() {
         setTitle("Code Buddy");
         setSize(width_final, height_final);
@@ -32,7 +33,7 @@ public class gui extends JFrame {
         setBackground(new Color(0, 0, 0));
         setForeground(new Color(0, 0, 0));
     }
-
+    // Main Method
     public static void main(String[] args) throws IOException {
 
         EventQueue.invokeLater(() -> {
@@ -91,20 +92,22 @@ public class gui extends JFrame {
 
     public static void searchTab() throws IOException {
         try {
-            Robot robot = new Robot();
             // Simulate a key press
-            robot.delay(3000);
-            robot.keyPress(KeyEvent.VK_CONTROL);
-            robot.keyPress(KeyEvent.VK_C );
-            robot.delay(500);
-            robot.keyRelease(KeyEvent.VK_C);
-            robot.keyRelease(KeyEvent.VK_CONTROL);
-            robot.delay(500);
-            String data = (String) Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor); 
+            Robot robot_search = new Robot();
+            robot_search.delay(3000);
+            // Copy data (ctrl+c)
+            robot_search.keyPress(KeyEvent.VK_CONTROL);
+            robot_search.keyPress(KeyEvent.VK_C);
+            robot_search.delay(500);
+            robot_search.keyRelease(KeyEvent.VK_C);
+            robot_search.keyRelease(KeyEvent.VK_CONTROL);
+            robot_search.delay(500);
+            // Get the copied data
+            String data = (String) Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor);
             System.out.println(data);
-    } catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
-    }
+        }
     }
 
     public static void todoTab() {

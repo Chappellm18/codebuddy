@@ -24,6 +24,7 @@ public class gui extends JFrame {
     public gui() {
         initUI();
     }
+
     // Set defualts
     private void initUI() {
         setTitle("Code Buddy");
@@ -33,6 +34,7 @@ public class gui extends JFrame {
         setBackground(new Color(0, 0, 0));
         setForeground(new Color(0, 0, 0));
     }
+
     // Main Method
     public static void main(String[] args) throws IOException {
 
@@ -89,11 +91,13 @@ public class gui extends JFrame {
             gui.setVisible(true);
         });
     }
+
     // Starts by copying data to the clipboard
-    // The code then gets the data and will open 
+    // The code then gets the data and will open
     // a web browers to search it. Auto filling and searching.
-    // Maybe make a "better search" 
+    // Maybe make a "better search"
     public static void searchTab() throws IOException {
+        String data = "";
         try {
             // Simulate a key press
             Robot robot_search = new Robot();
@@ -106,11 +110,14 @@ public class gui extends JFrame {
             robot_search.keyRelease(KeyEvent.VK_CONTROL);
             robot_search.delay(500);
             // Get the copied data
-            String data = (String) Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor);
+            data = (String) Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor);
             System.out.println(data);
+            Process p = Runtime.getRuntime().exec("python webDriver.py " + data);
+            System.out.println(p + "\n -- finished --");
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 
     public static void todoTab() {

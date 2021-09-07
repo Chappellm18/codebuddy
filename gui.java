@@ -93,10 +93,13 @@ public class gui extends JFrame {
         try {
             Robot robot = new Robot();
             // Simulate a key press
-            robot.keyPress(65489 );
-            //robot.keyPress(KeyEvent.VK_CONTROL);
-            robot.keyRelease(65489 );
-            //robot.keyRelease(KeyEvent.VK_CONTROL);
+            robot.delay(3000);
+            robot.keyPress(KeyEvent.VK_CONTROL);
+            robot.keyPress(KeyEvent.VK_C );
+            robot.delay(500);
+            robot.keyRelease(KeyEvent.VK_C);
+            robot.keyRelease(KeyEvent.VK_CONTROL);
+            robot.delay(500);
             String data = (String) Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor); 
             System.out.println(data);
     } catch (Exception e) {

@@ -89,7 +89,10 @@ public class gui extends JFrame {
             gui.setVisible(true);
         });
     }
-
+    // Starts by copying data to the clipboard
+    // The code then gets the data and will open 
+    // a web browers to search it. Auto filling and searching.
+    // Maybe make a "better search" 
     public static void searchTab() throws IOException {
         try {
             // Simulate a key press

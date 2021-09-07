@@ -51,34 +51,34 @@ public class gui extends JFrame {
             // buttons
             JButton GitButton = new JButton();
             JButton SearchButton = new JButton();
-            // JButton ToDoButton = new JButton();
+            JButton ToDoButton = new JButton();
             // set color of buttons
             GitButton.setBackground(new Color(81, 139, 214));
             SearchButton.setBackground(new Color(81, 139, 214));
-            // ToDoButton.setBackground(new Color(81, 139, 214));
+            ToDoButton.setBackground(new Color(81, 139, 214));
             GitButton.setForeground(new Color(81, 139, 214));
             SearchButton.setForeground(new Color(81, 139, 214));
-            // ToDoButton.setForeground(new Color(81, 139, 214));
+            ToDoButton.setForeground(new Color(81, 139, 214));
             // create icons
             Icon gI = new ImageIcon("./gitIcons/gitAddIcon.png");
             Icon sI = new ImageIcon("./searchIcons/searchIcon.png");
-            // Icon tI = new ImageIcon("./todoIcons/todoIcon.png");
+            Icon tI = new ImageIcon("./todoIcons/todoIcon.png");
             // set icons
             GitButton.setIcon(gI);
             SearchButton.setIcon(sI);
-            // ToDoButton.setIcon(tI);
+            ToDoButton.setIcon(tI);
             // set size of button
             GitButton.setSize(width_final, height_final / 3);
             SearchButton.setSize(width_final, height_final / 3);
-            // ToDoButton.setSize(width_final, height_final / 3);
+            ToDoButton.setSize(width_final, height_final / 3);
             // set points for button locations
             Point GB = new Point(0, 0);
             Point SB = new Point(0, height_final / 3);
-            // Point TB = new Point(0, height_final / 3);
+            Point TB = new Point(0, height_final / 3);
             // add button to frame and set location
             gui.add(GitButton).setLocation(GB);
             gui.add(SearchButton).setLocation(SB);
-            // gui.add(ToDoButton).setLocation(TB);
+            gui.add(ToDoButton).setLocation(TB);
             // add function to buttons
             SearchButton.addActionListener(e -> {
                 try {
@@ -112,8 +112,14 @@ public class gui extends JFrame {
             // Get the copied data
             data = (String) Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor);
             System.out.println(data);
-            Process p = Runtime.getRuntime().exec("python webDriver.py " + data);
-            System.out.println(p + "\n -- finished --");
+            // System.getProperty("user.dir") + "\\
+            ProcessBuilder builder = new ProcessBuilder("python ", "pageOpen.py ", data);
+            Process process = builder.start();
+            System.out.println("python " + "pageOpen.py" + data);
+            robot_search.delay(300);
+            System.out.println(data);
+            robot_search.delay(300);
+            System.out.println(process + "\n -- finished --");
         } catch (Exception e) {
             e.printStackTrace();
         }

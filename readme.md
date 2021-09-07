@@ -23,7 +23,7 @@ click it and it expands
 
 Java - I like it thats why
 Java swing - for the gui
-python or c - depends on how getting selected text works
+python  - to open website of selected text
 html - small localhost page for settings
 
 # Ideas

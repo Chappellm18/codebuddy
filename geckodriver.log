@@ -1,0 +1,21 @@
+1631044719326	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\chapp\\AppData\\Local\\Temp\\rust_mozprofileGP1D4f"
+1631044719963	Marionette	INFO	Marionette enabled
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\chapp\\AppData\\Local\\Temp\\rust_mozprofileGP1D4f\\search.json.mozlz4", (void 0)))
+1631044722654	Marionette	INFO	Listening on port 58624
+1631044722685	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1631044744441	Marionette	INFO	Stopped listening on port 58624
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1631044756523	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\chapp\\AppData\\Local\\Temp\\rust_mozprofile370eQ0"
+1631044757103	Marionette	INFO	Marionette enabled
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\chapp\\AppData\\Local\\Temp\\rust_mozprofile370eQ0\\search.json.mozlz4", (void 0)))
+1631044759669	Marionette	INFO	Listening on port 58719
+1631044759732	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1631044762433	Marionette	INFO	Stopped listening on port 58719
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
